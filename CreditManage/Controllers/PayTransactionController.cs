@@ -19,7 +19,7 @@ namespace CreditManage.Controllers
 
         // GET: api/PayTransaction/5
 
-        [Route("api/Payments/{id}")]
+        [Route("Payments/{id}")]
         public IHttpActionResult Get(int id)
         {
             IList<PayTransaction> salesinvoices = null;
@@ -53,7 +53,7 @@ namespace CreditManage.Controllers
         }
 
         // PUT: api/PayTransaction/5
-        [Route("api/Reverse Sale")]
+        [Route("Reverse Sale")]
         public IHttpActionResult Put(RejectedInvoice s)
         {
             if (!ModelState.IsValid)

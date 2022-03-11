@@ -20,7 +20,7 @@ namespace CreditManage.Controllers
         }
 
         // GET: api/SaleInvoices/5
-        [Route("api/SaleInvoices/{id}")]
+        [Route("SaleInvoices/{id}")]
         public IHttpActionResult Get(int id)
         {
             IList<SalesInvoice> salesinvoices = null;
@@ -54,7 +54,7 @@ namespace CreditManage.Controllers
 
         // POST: api/SaleInvoices
 
-        [Route("api/Sale")]
+        [Route("Sale")]
         public HttpResponseMessage Post(SalesInvoice s)
         {
             if (!ModelState.IsValid)
@@ -83,7 +83,7 @@ namespace CreditManage.Controllers
         }
 
         //[AcceptVerbs(HttpVerbs.Post | HttpVerbs.Get)]
-        [Route("api/MakePayment")]
+        [Route("MakePayment")]
         public HttpResponseMessage PostPay(Payments s)
         {
             if (!ModelState.IsValid)
@@ -134,7 +134,7 @@ namespace CreditManage.Controllers
 
         //get payments customer id
         // GET: api/SaleInvoices/5
-        [Route("api/Paymentes/{id}")]
+        [Route("Paymentes/{id}")]
         public IHttpActionResult GetCustomers(int id)
         {
             IList<Payment> salesinvoices = null;
@@ -169,7 +169,7 @@ namespace CreditManage.Controllers
         }
 
 
-        [Route("api/customerstatement/{id}")]
+        [Route("customerstatement/{id}")]
         public SalesInvoice GetCustomerDeta(long? id)
         {
             try

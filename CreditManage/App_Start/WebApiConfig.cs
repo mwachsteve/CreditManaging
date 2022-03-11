@@ -17,7 +17,7 @@ namespace CreditManage
             // customer route
             config.Routes.MapHttpRoute(
                 name: "Customer",
-                routeTemplate: "api/customers/{id}",
+                routeTemplate: "Customers/{id}",
                 defaults: new { controller = "customer", id = RouteParameter.Optional }
     
                 //constraints: new { id = "/d+" }
@@ -26,7 +26,7 @@ namespace CreditManage
             // customeraccounts route
             config.Routes.MapHttpRoute(
                 name: "CustomerAccounts",
-                routeTemplate: "api/customeraccounts/{id}",
+                routeTemplate: "CustomerAccounts/{id}",
                 defaults: new { controller = "customeraccounts", id = RouteParameter.Optional }
 
             //constraints: new { id = "/d+" }
@@ -34,7 +34,7 @@ namespace CreditManage
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                routeTemplate: "{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
         }
