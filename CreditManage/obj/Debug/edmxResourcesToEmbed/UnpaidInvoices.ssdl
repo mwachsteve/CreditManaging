@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UnpaidInvoicesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Sales">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="product" Type="nvarchar" MaxLength="50" />
+    <Property Name="amount" Type="nvarchar" MaxLength="50" />
+    <Property Name="transactionDate" Type="datetime" />
+    <Property Name="price" Type="nvarchar" MaxLength="50" />
+    <Property Name="unit" Type="nvarchar" MaxLength="50" />
+    <Property Name="paymentTerms" Type="nvarchar" MaxLength="50" />
+    <Property Name="paymentMode" Type="nvarchar" MaxLength="50" />
+    <Property Name="dueDate" Type="datetime" />
+    <Property Name="customerId" Type="int" />
+    <Property Name="rejectStatus" Type="int" Nullable="false" />
+    <Property Name="paidStatus" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="UnpaidInvoicesModelStoreContainer">
+    <EntitySet Name="Sales" EntityType="Self.Sales" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

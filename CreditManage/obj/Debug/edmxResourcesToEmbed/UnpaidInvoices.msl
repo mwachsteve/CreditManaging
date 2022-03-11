@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UnpaidInvoicesModelStoreContainer" CdmEntityContainer="UnpaidInvoicesEntities">
+    <EntitySetMapping Name="Sales">
+      <EntityTypeMapping TypeName="UnpaidInvoicesModel.Sale">
+        <MappingFragment StoreEntitySet="Sales">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="product" ColumnName="product" />
+          <ScalarProperty Name="amount" ColumnName="amount" />
+          <ScalarProperty Name="transactionDate" ColumnName="transactionDate" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="unit" ColumnName="unit" />
+          <ScalarProperty Name="paymentTerms" ColumnName="paymentTerms" />
+          <ScalarProperty Name="paymentMode" ColumnName="paymentMode" />
+          <ScalarProperty Name="dueDate" ColumnName="dueDate" />
+          <ScalarProperty Name="customerId" ColumnName="customerId" />
+          <ScalarProperty Name="rejectStatus" ColumnName="rejectStatus" />
+          <ScalarProperty Name="paidStatus" ColumnName="paidStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

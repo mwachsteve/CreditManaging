@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="paymentsDoneModelStoreContainer" CdmEntityContainer="paymentsDoneEntities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="paymentsDoneModel.Account">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AccountNumber" ColumnName="AccountNumber" />
+          <ScalarProperty Name="ActualBalance" ColumnName="ActualBalance" />
+          <ScalarProperty Name="AvailableBalance" ColumnName="AvailableBalance" />
+          <ScalarProperty Name="CustomerId" ColumnName="CustomerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Payments">
+      <EntityTypeMapping TypeName="paymentsDoneModel.Payment">
+        <MappingFragment StoreEntitySet="Payments">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="InvoiceId" ColumnName="InvoiceId" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="PayDate" ColumnName="PayDate" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
