@@ -31,7 +31,7 @@ jobs:
         PATH: ''
 
     - name: Setup MSBuild (x64)
-      id: setup_msbuild_path
+      id: setup_msbuild_build
       uses: ./
       with:
         vs-prerelease: true
