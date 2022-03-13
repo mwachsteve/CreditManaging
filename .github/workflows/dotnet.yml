@@ -9,13 +9,30 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v2
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+    - name: setup-msbuild
+      uses: microsoft/setup-msbuild@v1.1
       with:
-        dotnet-version: 5.0.x
-    - name: Build
-      run: dotnet build
+        vs-version: '[16.4,16.5)'
+    - name: Setup MSBuild (PATH)
+      id: setup_msbuild_path
+      uses: ./
+
+    - name: echo msbuild path
+      run: |
+        echo "vswhere-path: ${{ steps.setup_msbuild_explicit.outputs.msbuildPath }}"
+        echo "PATH: ${{ steps.setup_msbuild_path.outputs.msbuildPath }}"
+    - name: echo MSBuild
+      run: msbuild -version
+
+    - name: echo vstest path
+      run: | 
+        echo "PATH: ${{ steps.setup_msbuild_path.outputs.vstestPath }}" 
+        
+    - name: echo VSTest
+      run: | 
+        vstest.console --help
+        vstest.console --help
