@@ -35,3 +35,4 @@ jobs:
     - name: echo VSTest
       run: | 
         vstest.console --help
+        vstest.console --help
