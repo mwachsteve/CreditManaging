@@ -13,6 +13,7 @@ jobs:
 
     steps:
     - uses: google-github-actions/setup-gcloud@master
+    
     - name: Setup MSBuild (vswhere-path)
       id: setup_msbuild_explicit
       uses: ./
